@@ -8,6 +8,7 @@ class RegistrationModel(models.Model):
     password = models.CharField(max_length=30)
     otp = models.IntegerField()
     doj = models.DateField(auto_now_add=True)
+    status = models.CharField(max_length=100,default="pending")
 
 class IndustriesModel(models.Model):
     ino = models.AutoField(primary_key=True)
