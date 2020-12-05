@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from process.forms import RegistrationForm
 
 
@@ -13,12 +13,14 @@ def registration(request):
         print("===============3==============")
         if rf.is_valid():
             print("===============4==============")
-
-            print("===============5==============")
             rf.save()
+            return redirect('user-otp')
         else:
             return render(request, 'process_templates/registration.html', {"form": rf})
     else:
         print("===============2==============")
         return render(request,'process_templates/registration.html',{"form":rf})
 
+
+def userOTP(request):
+    return render(request,"process_templates/otp.html")

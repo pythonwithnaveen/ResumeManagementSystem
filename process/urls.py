@@ -6,4 +6,7 @@ urlpatterns = [
     path('',views.showIndex,name='main_page'),
     path('registration/',views.registration,name='registration'),
     path('user_registration/',views.registration,name='user_registration'),
+
+    #otp-page
+    path('user_otp/',views.userOTP,name='user-otp')
 ]
