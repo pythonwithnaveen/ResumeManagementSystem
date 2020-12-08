@@ -6,7 +6,13 @@ urlpatterns = [
     path('',views.showIndex,name='main_page'),
     path('registration/',views.registration,name='registration'),
     path('user_registration/',views.registration,name='user_registration'),
-
+    path('validate_otp/',views.validate_otp,name='validate_otp'),
     #otp-page
-    path('user_otp/',views.userOTP,name='user-otp')
+    path('user_otp/',views.userOTP,name='user-otp'),
+    # conformation
+    path('conformation/',views.conformation,name='conformation'),
+
+    #for login
+    path('login/',views.login,name='login'),
+
 ]

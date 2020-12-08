@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    {% load static %}
+
+    {% for x in messages %}
+        <h1> {{ x }} </h1>
+    {% endfor %}
+
+    <a href="{% url 'login' %}"> Login From Here </a>
+
+{% endblock %}

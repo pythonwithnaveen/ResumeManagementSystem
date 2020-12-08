@@ -2,7 +2,53 @@
 
 {% block content %}
     {% load static %}
+<form action="{% url 'validate_otp' %}" method="post">
+{% csrf_token %}
+    <table align="center" border="0">
+        <tr><th colspan="2">
+            OTP Validation Page
+        </th></tr>
+        <tr>
+            <th>Contact No</th>
+            <th><input type="number" required name="t1"></th>
+        </tr>
 
-    <h1> Please enter OTP</h1>
+
+        <tr>
+            <th>OTP</th>
+            <th><input type="number" required name="t2"></th>
+        </tr>
+
+        <tr>
+            <th colspan="2">
+                <button type="submit">Submit</button>
+            </th>
+        </tr>
+    </table>
+</form>
+
+
+{% if message %}
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Warning!..... </strong> {{ message }}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+{#    <h1#}
+{#            style="#}
+{#            font-size: 35px;#}
+{#            font-family: 'Agency FB';#}
+{#            color:white;#}
+{#            text-align: center;#}
+{#            background-color: red">#}
+{##}
+{#        {{ message }}#}
+{#    </h1>#}
+{% endif %}
+
+
 
 {% endblock %}
