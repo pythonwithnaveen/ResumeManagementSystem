@@ -3,6 +3,13 @@
 
 {% block content %}
     {% load static %}
+
+    {% if request.session.contact %}
+
+        <h1>You are a Member Already </h1>
+
+    {% else %}
+
     <style>
         #r_one
         {
@@ -74,6 +81,6 @@
     </table>
     </form>
 
-
+{% endif %}
 
 {% endblock %}

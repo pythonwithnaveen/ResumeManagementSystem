@@ -15,4 +15,10 @@ urlpatterns = [
     #for login
     path('login/',views.login,name='login'),
 
+    #for login check
+    path('login_check/',views.login_check,name='login_check'),
+
+    path('view_profile/',views.view_profile,name='view_profile'),
+    path('logout/',views.logout,name='logout'),
+
 ]
