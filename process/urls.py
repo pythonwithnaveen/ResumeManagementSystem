@@ -21,4 +21,6 @@ urlpatterns = [
     path('view_profile/',views.view_profile,name='view_profile'),
     path('logout/',views.logout,name='logout'),
 
+    path('update_profile/',views.update_profile,name='update_profile'),
+
 ]

@@ -1,3 +1,10 @@
 from django.contrib import admin
+from process.models import IndustriesModel
+from django.contrib.auth.models import Group,User
 
-# Register your models here.
+
+admin.site.register(IndustriesModel)
+
+admin.site.unregister(Group)
+admin.site.unregister(User)
+
